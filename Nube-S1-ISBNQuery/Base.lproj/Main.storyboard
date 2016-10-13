@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Nube_S1_ISBNQuery" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +18,52 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ISBN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PuS-BP-YpT">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="978-84-376-0494-7" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="j8y-2m-PCO">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-qj-FHs">
+                                <state key="normal" title="Buscar"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgf-S0-0Bc">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="t6Y-s0-AGt">
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="j8y-2m-PCO" firstAttribute="top" secondItem="PuS-BP-YpT" secondAttribute="bottom" constant="8" id="1Ys-2W-5XD"/>
+                            <constraint firstItem="t6Y-s0-AGt" firstAttribute="top" secondItem="Fgf-S0-0Bc" secondAttribute="bottom" constant="8" id="AKc-bf-u5P"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Fgf-S0-0Bc" secondAttribute="leading" id="Gp5-pP-CWe"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="j8y-2m-PCO" secondAttribute="leading" id="NcR-bh-6Vd"/>
+                            <constraint firstItem="wUg-qj-FHs" firstAttribute="top" secondItem="PuS-BP-YpT" secondAttribute="bottom" constant="8" id="PN4-lG-04I"/>
+                            <constraint firstItem="t6Y-s0-AGt" firstAttribute="trailing" secondItem="wUg-qj-FHs" secondAttribute="trailing" id="QOZ-y2-ykC"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="PuS-BP-YpT" secondAttribute="leading" id="S5K-xd-URA"/>
+                            <constraint firstItem="PuS-BP-YpT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="V5x-O2-Weu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="wUg-qj-FHs" secondAttribute="trailing" id="ZhS-Y6-IXP"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="t6Y-s0-AGt" secondAttribute="leading" id="gU6-nE-CZo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t6Y-s0-AGt" secondAttribute="bottom" constant="8" symbolic="YES" id="hIk-Nd-HkN"/>
+                            <constraint firstItem="Fgf-S0-0Bc" firstAttribute="top" secondItem="j8y-2m-PCO" secondAttribute="bottom" constant="8" id="pSV-Fx-A26"/>
+                            <constraint firstItem="j8y-2m-PCO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-95" id="vgB-Pl-bzQ"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
 </document>
