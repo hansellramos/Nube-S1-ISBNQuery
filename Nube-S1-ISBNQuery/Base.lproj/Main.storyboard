@@ -45,11 +45,24 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mrg-OT-Q9y">
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="btnClearSearch:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VI8-vh-atp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ozi-2A-xiR">
+                                <state key="normal" title="Clear"/>
+                                <connections>
+                                    <action selector="btnClearResult:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f3n-8S-WB2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="j8y-2m-PCO" firstAttribute="top" secondItem="PuS-BP-YpT" secondAttribute="bottom" constant="8" id="1Ys-2W-5XD"/>
                             <constraint firstItem="t6Y-s0-AGt" firstAttribute="top" secondItem="Fgf-S0-0Bc" secondAttribute="bottom" constant="8" id="AKc-bf-u5P"/>
+                            <constraint firstItem="wUg-qj-FHs" firstAttribute="leading" secondItem="mrg-OT-Q9y" secondAttribute="trailing" constant="8" id="Ei0-hz-nmf"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Fgf-S0-0Bc" secondAttribute="leading" id="Gp5-pP-CWe"/>
                             <constraint firstAttribute="leadingMargin" secondItem="j8y-2m-PCO" secondAttribute="leading" id="NcR-bh-6Vd"/>
                             <constraint firstItem="wUg-qj-FHs" firstAttribute="top" secondItem="PuS-BP-YpT" secondAttribute="bottom" constant="8" id="PN4-lG-04I"/>
@@ -57,10 +70,13 @@
                             <constraint firstAttribute="leadingMargin" secondItem="PuS-BP-YpT" secondAttribute="leading" id="S5K-xd-URA"/>
                             <constraint firstItem="PuS-BP-YpT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="V5x-O2-Weu"/>
                             <constraint firstAttribute="trailingMargin" secondItem="wUg-qj-FHs" secondAttribute="trailing" id="ZhS-Y6-IXP"/>
+                            <constraint firstItem="ozi-2A-xiR" firstAttribute="top" secondItem="j8y-2m-PCO" secondAttribute="bottom" constant="4" id="b5a-Oo-dYx"/>
                             <constraint firstAttribute="leadingMargin" secondItem="t6Y-s0-AGt" secondAttribute="leading" id="gU6-nE-CZo"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="t6Y-s0-AGt" secondAttribute="bottom" constant="8" symbolic="YES" id="hIk-Nd-HkN"/>
+                            <constraint firstItem="mrg-OT-Q9y" firstAttribute="top" secondItem="PuS-BP-YpT" secondAttribute="bottom" constant="8" id="ht6-v8-zUG"/>
                             <constraint firstItem="Fgf-S0-0Bc" firstAttribute="top" secondItem="j8y-2m-PCO" secondAttribute="bottom" constant="8" id="pSV-Fx-A26"/>
-                            <constraint firstItem="j8y-2m-PCO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-95" id="vgB-Pl-bzQ"/>
+                            <constraint firstItem="ozi-2A-xiR" firstAttribute="leading" secondItem="Fgf-S0-0Bc" secondAttribute="trailing" constant="13" id="qVU-1n-hFX"/>
+                            <constraint firstItem="j8y-2m-PCO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-140" id="vgB-Pl-bzQ"/>
                         </constraints>
                     </view>
                     <connections>

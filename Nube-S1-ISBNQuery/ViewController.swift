@@ -11,6 +11,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var txtISBN: UITextField!
     @IBOutlet weak var txvResultado: UITextView!
+    @IBAction func btnClearSearch(_ sender: AnyObject) {
+        txtISBN.text = ""
+    }
+    @IBAction func btnClearResult(_ sender: AnyObject) {
+        txvResultado.text = ""
+    }
     @IBAction func btnBuscar(_ sender: UIButton) {
         txvResultado.text = "Cargando..."
         let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:\(txtISBN.text!)"
