@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func btnClearResult(_ sender: AnyObject) {
         txvResultado.text = ""
     }
-    @IBAction func btnBuscar(_ sender: UIButton) {
+    @IBAction func btnBuscar(_ sender: AnyObject) {
         txvResultado.text = "Cargando..."
         let urls = "https://openlibrary.org/api/books?jscmd=data&format=json&bibkeys=ISBN:\(txtISBN.text!)"
         let url = URL(string: urls)
