@@ -31,6 +31,9 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-qj-FHs">
                                 <state key="normal" title="Buscar"/>
+                                <connections>
+                                    <action selector="btnBuscar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H5l-VG-4yk"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Resultado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fgf-S0-0Bc">
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -60,6 +63,10 @@
                             <constraint firstItem="j8y-2m-PCO" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-95" id="vgB-Pl-bzQ"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtISBN" destination="j8y-2m-PCO" id="PyB-xT-KHs"/>
+                        <outlet property="txvResultado" destination="t6Y-s0-AGt" id="Ay8-am-O9W"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
